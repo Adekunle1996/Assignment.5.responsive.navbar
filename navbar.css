@@ -1,0 +1,104 @@
+ *{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+/* desktop view */
+
+
+/* the navbar */
+nav{
+    width:100%;
+    min-height: 10vh;
+    background-color: blue;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo{
+    letter-spacing: 2px;
+}
+/* the nav-menu */
+nav .nav-menu{
+    display:flex;
+    width:400px;
+    justify-content: space-around;
+}
+/* the nav-menu item */
+nav .nav-menu li{
+    list-style: none;
+}
+/* the nav-menu links */
+nav .nav-menu li a {
+    color:white;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+nav .nav-menu li a:hover{
+    opacity:0.7;
+} 
+/* the navbar hamburger */
+.burger div{
+    width:17px;
+    height:2px;
+    margin:3px;
+    background-color: white;
+}
+.burger{
+    display: none;
+}
+/* mobile view */
+ @media screen and (max-width:600px){
+     body{
+         overflow: hidden;
+     }
+     /* nav-menu */
+     .nav-menu{
+         position:absolute;
+         top:10vh;
+         right:0;
+         width:50%;
+         height:90vh;
+         background-color: blue;
+         display:flex;
+         flex-direction: column;
+         justify-content: space-around;
+         align-items: center;
+         transform: translateX(500px);
+         transition: transform 2s ease;
+     }
+     /* the nav-menu item */
+     .nav-menu li{
+         opacity:0;
+     }
+     .burger{
+        display:block;
+    }
+     .menu-display{
+         transform: translateX(0px);
+
+     }
+     /* animation effect */
+     @keyframes menu-item-animate {
+         from{
+             opacity:0;
+             transform: translateX(50px);
+         }
+         to{
+             opacity:1;
+             transform: translateX(0px);
+         }
+     }
+     /* the closing amburger */
+     .toggle .line1{
+        transform: rotate(130deg);
+        position: absolute;
+     }
+     .toggle .line2{
+        transform: rotate(49deg);
+     }
+     .toggle .line3{
+        display:none;
+     }
+ }
+ 
